@@ -9,5 +9,5 @@ RUN pip install -r requirements.txt
 RUN mkdir /app
 COPY ./app /app
 
-RUN adduser --no-create-home user
+RUN adduser user
 USER user
