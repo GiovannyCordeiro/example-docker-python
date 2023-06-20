@@ -1,0 +1,12 @@
+version: "3.9"
+
+services:
+  app:
+    build: .
+    restart: always
+    volumes:
+      - ./app:/app
+    ports:
+      - 8000:8000
+    container_name: othertest_container
+    command: sh -c "cd app && python manage.py runserver 0.0.0.0:8000" 
